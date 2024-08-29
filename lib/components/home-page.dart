@@ -1,7 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:game/components/ball.dart';
+import 'package:game/components/player.dart';
 import 'package:game/components/welcome-page.dart';
 
 class HomePage extends StatefulWidget {
@@ -37,8 +37,14 @@ class _HomePageState extends State<HomePage> {
         body: Center(
           child: Stack(
             children: [
+              // Static screen
               WelcomePage(hasGameStarted: hasGameStarted),
-              Ball(ballX: ballX, ballY: ballY)
+
+              // Ball
+              Ball(ballX: ballX, ballY: ballY),
+
+              // Player
+              const Player(),
             ],
           ),
         ),
